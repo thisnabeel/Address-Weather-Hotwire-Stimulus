@@ -1,9 +1,18 @@
+<!-- ⚠️ This README has been generated from the file(s) "blueprint.md" ⚠️-->
 
-# Weather Forecast App
-## Overview
+[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#weather-forecast-app)
+
+# ➤ Weather Forecast App
+
+[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#overview)
+
+## ➤ Overview
 This is a Ruby on Rails application for retrieving weather forecasts. It utilizes external APIs, including Google Maps API and Visual Crossing API, to fetch location suggestions and weather data.
 
-## Setup
+
+[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#setup)
+
+## ➤ Setup
 ### Ruby version
 Ensure you have Ruby version 3.2.2 installed.
 
@@ -22,20 +31,32 @@ VISUAL_CROSSING_API_KEY: YOUR_VISUAL_CROSSING_API_KEY
 ### Database creation and initialization
 This application does not require a database, as it relies on external APIs for data.
 
-## How to run the test suite
+
+[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#how-to-run-the-test-suite)
+
+## ➤ How to run the test suite
 ### Run the tests with:
 
  ```bash
 rails test
 ```
 
-## Services
+
+[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#services)
+
+## ➤ Services
 This application makes use of external services, including job queues for asynchronous processing and cache servers for caching weather data.
 
-## Deployment instructions
+
+[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#deployment-instructions)
+
+## ➤ Deployment instructions
 Deploy the application using your preferred hosting platform. Make sure to set up environment variables for your API keys.
 
-## Usage
+
+[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#usage)
+
+## ➤ Usage
 1. Run the Rails server:
 ```bash
 rails server
@@ -43,12 +64,18 @@ rails server
 2. Visit http://localhost:3000 in your browser.
 3. Enter a location in the search bar to get a weather forecast.
 
-## Code Structure
+
+[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#code-structure)
+
+## ➤ Code Structure
 The primary controller responsible for weather forecasts is WeatherController. It uses helper classes such as CoordinatesFinder, AddressSuggestor, and ForecastFinder to interact with external APIs.
 
 The front end is implemented using StimulusJS for dynamic interactions.
 
-## Additional Information
+
+[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#additional-information)
+
+## ➤ Additional Information
 The application uses Tailwind CSS for styling.
 Gemfile includes dependencies for testing, debugging, and other development-related tools.
 Figaro gem is used for managing sensitive API keys.
