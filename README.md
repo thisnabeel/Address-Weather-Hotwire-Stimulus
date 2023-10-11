@@ -1,24 +1,56 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Weather Forecast App
+## Overview
+This is a Ruby on Rails application for retrieving weather forecasts. It utilizes external APIs, including Google Maps API and Visual Crossing API, to fetch location suggestions and weather data.
 
-Things you may want to cover:
+## Setup
+### Ruby version
+Ensure you have Ruby version 3.2.2 installed.
 
-* Ruby version
+### System dependencies
+Make sure you have the required system dependencies installed. Check the Gemfile for details.
 
-* System dependencies
+### Configuration
+1. Create an application.yml file in the config directory.
+2. Add your API keys to the application.yml file:
+ ```yaml
+GOOGLE_MAPS_API_KEY: YOUR_GOOGLE_MAPS_API_KEY
+VISUAL_CROSSING_API_KEY: YOUR_VISUAL_CROSSING_API_KEY
+```
+3. Run bundle install to install the required gems.
 
-* Configuration
+### Database creation and initialization
+This application does not require a database, as it relies on external APIs for data.
 
-* Database creation
+## How to run the test suite
+### Run the tests with:
 
-* Database initialization
+ ```bash
+rails test
+```
 
-* How to run the test suite
+## Services
+This application makes use of external services, including job queues for asynchronous processing and cache servers for caching weather data.
 
-* Services (job queues, cache servers, search engines, etc.)
+## Deployment instructions
+Deploy the application using your preferred hosting platform. Make sure to set up environment variables for your API keys.
 
-* Deployment instructions
+## Usage
+1. Run the Rails server:
+```bash
+rails server
+```
+2. Visit http://localhost:3000 in your browser.
+3. Enter a location in the search bar to get a weather forecast.
 
-* ...
+## Code Structure
+The primary controller responsible for weather forecasts is WeatherController. It uses helper classes such as CoordinatesFinder, AddressSuggestor, and ForecastFinder to interact with external APIs.
+
+The front end is implemented using StimulusJS for dynamic interactions.
+
+## Additional Information
+The application uses Tailwind CSS for styling.
+Gemfile includes dependencies for testing, debugging, and other development-related tools.
+Figaro gem is used for managing sensitive API keys.
+HTTParty gem is utilized for making HTTP requests to external APIs.
+Feel free to explore the codebase for more details on the implementation.
