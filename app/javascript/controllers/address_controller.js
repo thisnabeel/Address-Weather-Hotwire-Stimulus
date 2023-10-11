@@ -1,5 +1,6 @@
 // javascript/weather_controller.js
 import { Controller } from "@hotwired/stimulus";
+import API from "./api";
 
 const csrfToken = document.querySelector('meta[name="csrf-token"]').content;
 
@@ -19,21 +20,7 @@ export default class extends Controller {
       place_id: e.target.getAttribute("place_id"),
     };
 
-    fetch("/weather/forecast", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "X-CSRF-Token": csrfToken,
-      },
-      body: JSON.stringify(payload),
-    })
-      .then((response) => response.text())
-      .then((data) => {
-        forecastTarget.innerHTML = data;
-      })
-      .catch((error) => {
-        console.error("Error fetching forecast:", error);
-      });
+    API("/weather/forecast", payload, "POST", forecastTarget);
   }
 
   searchInput() {
@@ -46,20 +33,6 @@ export default class extends Controller {
       address: value,
     };
 
-    fetch("/address/suggestions", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "X-CSRF-Token": csrfToken,
-      },
-      body: JSON.stringify(payload),
-    })
-      .then((response) => response.text())
-      .then((data) => {
-        suggestionsTarget.innerHTML = data;
-      })
-      .catch((error) => {
-        console.error("Error fetching suggestions:", error);
-      });
+    API("/address/suggestions", payload, "POST", suggestionsTarget);
   }
 }
