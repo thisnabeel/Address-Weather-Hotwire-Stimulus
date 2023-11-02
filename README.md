@@ -42,6 +42,11 @@ This application does not require a database, as it relies on external APIs for 
 rails test
 ```
 
+### Run the tests with:
+```bash
+rspec
+```
+
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#services)
 
 ## ➤ Services
