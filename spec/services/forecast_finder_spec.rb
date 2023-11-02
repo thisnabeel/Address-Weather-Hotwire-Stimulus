@@ -17,7 +17,6 @@ RSpec.describe ForecastFinder, type: :service do
             forecast: {
               summary: 'Sunny',
               temperature: 25
-              # Add other forecast attributes based on the actual API response structure
             }
           }.to_json,
           headers: { 'Content-Type': 'application/json' }

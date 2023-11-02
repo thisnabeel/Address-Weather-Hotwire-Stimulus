@@ -92,3 +92,9 @@ RSpec.configure do |config|
   Kernel.srand config.seed
 =end
 end
+
+require 'simplecov'
+
+SimpleCov.start 'rails' do
+  add_group 'Services', 'app/services'
+end
